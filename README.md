@@ -45,7 +45,25 @@ WHERE country LIKE "United States"
 ORDER BY population DESC
 LIMIT 2 OFFSET 2;
 ```
+## Lesson 12
 
+### Case 1
+"Find the number of movies each director has directed"
+```
+SELECT director, COUNT(id) as Directed
+FROM movies
+GROUP BY director;
+```
+
+### Case 2
+"Find the total domestic and international sales that can be attributed to each director"
+```
+SELECT director, SUM(domestic_sales + international_sales) as TotalSales
+FROM movies
+    INNER JOIN boxoffice
+        ON movies.id = boxoffice.movie_id
+GROUP BY director;
+```
 
 ## EXERCISE SQL PD
 
