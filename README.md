@@ -1,8 +1,8 @@
 # SQLBOLT-Cabahug
 
 ### Case 1
-```
 "List all the Canadian cities and their populations "
+```
 SELECT city, population 
 FROM north_american_cities
 WHERE COUNTRY = "Canada";
