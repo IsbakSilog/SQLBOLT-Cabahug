@@ -20,7 +20,8 @@ order by latitude desc;
 ### Case 3
 "List all the cities west of Chicago, ordered from west to east"
 ```
-SELECT CITY FROM north_american_cities
+SELECT city
+FROM north_american_cities
 WHERE LONGITUDE < -87.629798
 ORDER BY LONGITUDE ASC;
 ```
@@ -31,16 +32,16 @@ ORDER BY LONGITUDE ASC;
 ```
 SELECT city, population
 FROM north_american_cities
-WHERE country = "Mexico"
+WHERE country LIKE "Mexico"
 ORDER BY population DESC
-LIMIT 2
+LIMIT 2;
 ```
 
 ### Case 5
 "List the third and fourth largest cities (by population) in the United States and their population "
 ```
 SELECT city, population FROM north_american_cities
-WHERE country = "Mexico"
+WHERE country LIKE "United States"
 ORDER BY population DESC
-LIMIT 2;
+LIMIT 2 OFFSET 2;
 ```
