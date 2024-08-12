@@ -1,5 +1,7 @@
 # SQLBOLT-Cabahug
 
+## Lesson 4
+
 ### Case 1
 "List all the Canadian cities and their populations "
 ```
